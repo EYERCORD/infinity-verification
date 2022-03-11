@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Infinity Verification</title>
+<link rel="shortcut icon" href="favicon.png" type="image/png">
+<link href="/static/server.css" rel="stylesheet">
+</head>
+<body>
+    
+<header>
+        <div class="header-bg center">
+            <br>
+            <ul class="main-menu">
+                <li class="active"><a target="_blank" href="https://infinity-verification.ml/">Главная</a></li>
+                <li><a target="_blank" href="https://discord.com/oauth2/authorize?client_id=908235096753053696&permissions=8&scope=bot">Пригласить бота</a></li>
+                <li><a target="_blank" href="https://discord.gg/TanM3qq4r7">Поддержка</a></li>       
+            </ul>
+        </div>
+        </header>
+
+<div class="block1">
+    <div class="center">
+    <br>
+<img class="avatar" src="{{server['guild_avatar']}}">
+<h1>{{server['guild_name']}}</h1>
+<div class="center">
+    <h4 class="owner">Владелец: <span class="marker"><b>⠀{{server['guild_owner']}}⠀</b></span></h4>
+    <h4 class="users">Кол-во пользователей: <span class="marker"><b>⠀{{server['guild_members']}}⠀</b></span></h4>
+</div>
+
+<button class="btn1 left"><b><a href='/login'>Верифицироваться</a></b></button>
+<br>
+<br>
+</div>
+</div>
+<div class="center">
+    <h1 class="login">Выполнен вход как: <img class="img" src="{{avatar}}"> <span class="orange">{{usr}}</span></h1>
+</div>
+</body>
+</html>

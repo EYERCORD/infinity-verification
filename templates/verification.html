@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Infinity Verification</title>
+    <link href="/static/verification.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7, 
+user-scalable=no">
+
+</head>
+<body>
+<div id="snow-animation-container"></div>
+<form class="decor" method = "post">
+    <div class="form-left-decoration"></div>
+    <div class="form-right-decoration"></div>
+    <div class="circle"></div>
+    <div class="form-inner">
+    <h3 class="h3">Верифицироваться</h3>
+    <h4 class="h4">{{login['user']}}</h4>
+    <h4 class="h4">Сервер: {{login['server']}}</h4>
+    <img src="/captcha/{{ code }}.png" class="captcha"/>
+    <input type="text" placeholder="Реши капчу" name="cap"/>
+    <input type="submit" value="Верифицироваться">
+    </form>
+</body>
+</html>

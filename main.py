@@ -1,3 +1,7 @@
+#тут очень много говно кода (переписывать времени не было, поэтому перепишу позже)
+
+
+
 from flask import Flask, abort, request, redirect, render_template, session, send_file, url_for
 from oauth import Oauth
 import random
@@ -26,16 +30,16 @@ AUTHORIZATION_BASE_URL = API_BASE_URL + '/oauth2/authorize'
 TOKEN_URL = API_BASE_URL + '/oauth2/token'
 # os.system('clear')
 
-token = 'OTA4MjM1MDk2NzUzMDUzNjk2.YYyx2Q.OnCYioXJ4_E36GxZ352mgs51kRw'
+token = '' #токен бота
 
 
 def ban(id, gid):
-    r = requests.put(f'https://discord.com/api/guilds/{int(gid)}/bans/{id}', headers={'Authorization': f'Bot {token}'})
+    r = requests.put(f'https://discord.com/api/guilds/{gid}/bans/{id}', headers={'Authorization': f'Bot {token}'})
     return r.status_code
 
 
 def add_role(mid, rid, gid):
-    r = requests.put(f'https://discord.com/api/guilds/{int(gid)}/members/{mid}/roles/{rid}',
+    r = requests.put(f'https://discord.com/api/guilds/{gid}/members/{mid}/roles/{rid}',
                      headers={'Authorization': f'Bot {token}'})
     return r.status_code
 

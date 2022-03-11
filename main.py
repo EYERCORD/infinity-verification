@@ -351,7 +351,6 @@ def login():
         return render_template('error.html', code=session.get('oauth2_state'), error = "Ошибка! Капча решена неверно.", login = dt)
 
     #guilds = guild
-    # раньше меня нашел ;-;
     servers = []
     for guild in guilds:
         servers.append(int(guild['id']))
